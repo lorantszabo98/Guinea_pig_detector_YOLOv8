@@ -9,7 +9,7 @@ This repository contains code and data for guinea pig detection using YOLOv8. Th
 
 3.  `trained_models directory`: This directory contains the trained YOLOv8 models. `YOLOv8_small_dataset.pt` is the model which I trained on the small Roboflow dataset (131 images). `YOLOv8_larger_own_dataset.pt` is trained on my own larger dataset (1551 images).
 
-4.  `inference.py`: This file contains the inference code for the models.
+4.  `inference.py`: This file contains the inference code for the models. The script detects the guinea pigs on the images of the test directory (or single test image) with the trained custom YOLOv8 model. After that it calculates the number of guinea pigs, remove the background of the ROI-s with `rembg` library and perform color analysis based on the `colorthief` library. In the result of this the detected guinea pigs are classified based on their primary color to `black` or `white` classes.
 
 
 Dataset
